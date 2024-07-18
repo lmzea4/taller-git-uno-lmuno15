@@ -1,0 +1,18 @@
+UpdateBlobs es una aplicación de ejemplo 
+// que muestra algunas de las API que proporcionan
+// soporte para cambiar objetos Blob 
+// y reflejar esos cambios en la 
+// base de datos.
+//
+// Este programa debe ejecutarse después de
+// finalizar el programa PutGetBlobs.
+/////////////////////////////////////////
+import java.sql.*;
+
+public class UpdateBlobs {
+   public static void main(String[] args) 
+   throws SQLException 
+   {
+       // Registrar el controlador JDBC nativo.
+       try {
+          Class.forName("com.ibm.db2.jdbc.app.DB2Driver");
