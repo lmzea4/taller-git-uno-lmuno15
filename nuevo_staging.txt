@@ -1,0 +1,18 @@
+ UseBlobs es una aplicación de ejemplo 
+// que muestra algunas de las API asociadas
+// con objetos Blob.
+//
+// Este programa debe ejecutarse después de
+// finalizar el programa PutGetBlobs.
+/////////////////////////////////////////
+import java.sql.*;
+
+public class UseBlobs {
+   public static void main(String[] args) 
+   throws SQLException 
+   {
+       // Registrar el controlador JDBC nativo.
+       try {
+          Class.forName("com.ibm.db2.jdbc.app.DB2Driver");
+      } catch (Exception e) {
+          System.exit(1);  // Error de configuración.
