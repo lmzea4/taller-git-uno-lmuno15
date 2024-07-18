@@ -1,0 +1,18 @@
+
+public class PreparedStatementExample {
+
+    public static void main(java.lang.String[] args) 
+    {
+        // Cargar lo siguiente desde un objeto de propiedades.
+        String DRIVER = "com.ibm.db2.jdbc.app.DB2Driver";
+        String URL    = "jdbc:db2://*local";
+
+        // Registrar el controlador JDBC nativo. Si el controlador no puede 
+        // registrarse, la prueba no puede continuar.
+        try {
+            Class.forName(DRIVER);
+        } catch (Exception e) {
+            System.out.println("No se ha podido registrar el controlador.");
+            System.out.println(e.getMessage());
+            System.exit(1);
+        }
